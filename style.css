@@ -1,10 +1,166 @@
 
+
+/* --- RESET E CONFIGURAÇÕES GERAIS --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    height: 2000px; 
+    background-color: #f4f7f6;
+    padding-top: 80px;
+}
+
+/* --- ESTILOS DO HEADER --- */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+    background-color: #ffffff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+/* Classe ativada via JavaScript ao rolar a página */
+.header.shrink {
+    padding: 10px 10%;
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: #1a1a1a;
+    text-decoration: none;
+}
+
+.logo span {
+    color: #007bff;
+}
+
+/* --- MENU DE NAVEGAÇÃO --- */
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #555555;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.nav-link:hover {
+    color: #007bff;
+}
+
+/* --- BOTÃO DE CTA --- */
+.btn-cta {
+    background-color: #007bff;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.btn-cta:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+/* --- MENU HAMBÚRGUER (MOBILE) --- */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+.menu-toggle .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #1a1a1a;
+    transition: 0.3s;
+}
+
+/* --- CONTEÚDO DE EXEMPLO --- */
+.content-box {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+/* --- RESPONSIVIDADE (MOBILE) --- */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+    }
+
+    .nav-menu {
+        position: absolute;
+        top: 100%;
+        left: -100%;
+        flex-direction: column;
+        background-color: #ffffff;
+        width: 100%;
+        text-align: center;
+        padding: 40px 0;
+        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.05);
+        transition: 0.4s ease;
+        gap: 25px;
+    }
+
+    /* Classe ativada via JavaScript para abrir o menu mobile */
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .btn-cta {
+        display: none; /* Oculta o CTA principal no mobile para simplificar */
+    }
+
+    /* Animação do botão hambúrguer virando um "X" */
+    .menu-toggle.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    .menu-toggle.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    .menu-toggle.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+}
+
+/* ======================================== */
+
+/* ======================================== */
+
 body{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     /* background-color: rgb(255, 242, 0) */
 
 }
-header, nav, section, article, footer{
+nav{
+    background-color: white;
+}
+header, section, article, footer{
     background-color: white;
     border: 1px solid #e0e0e0;
     border-radius: 4px;         
@@ -35,6 +191,9 @@ nav{
 }
 section{
     grid-column: 2 / -1;
+}
+.footer {
+    flex-shrink: 0;
 }
 footer{
     grid-column: 1 / -1;
