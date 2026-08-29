@@ -1,0 +1,63 @@
+
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+footer{
+    background-color: blueviolet;
+}
+section{
+    background-color: chartreuse;
+}
+nav{
+    background-color: fuchsia;
+}
+header{
+    background-color: crimson;
+}
+article{
+    background-color: rgb(255, 242, 0)
+}
+.grid-wrapper>*{
+    min-height: 100px;
+    border-radius: 4px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.grid-wrapper{
+    /* row-gap: 5px; */
+    display: grid;
+    grid-template-rows: repeat(4, auto);
+    grid-template-columns: 240px 1fr;
+    gap: 1rem;
+
+}
+header{
+    grid-column: 1 / -1; 
+    grid-row: 1 / 2;
+}
+nav{
+    grid-row: 2 / -2;
+}
+section{
+    grid-column: 2 / -1;
+}
+footer{
+    grid-column: 1 / -1;
+    grid-row: -2 / -1;
+}
+.grid-wrapper>main{
+    display: grid;
+    grid-auto-rows: auto;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+article{
+    min-height: 100px;
+    border-radius: 4px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
