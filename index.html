@@ -1,33 +1,48 @@
 <!DOCTYPE html>
-<html lang="pt-BR>
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prática de Header Profissional</title>
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
 </head>
 <body>
-    <div class="grid-wrapper">
 
-        <header>header</header>
+    <!-- ESTRUTURA HTML DO HEADER -->
+    <header class="header" id="main-header">
+        <a href="#" class="logo">Exer<span>cícios</span></a>
+        
+        <nav>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#" class="nav-link">Início</a></li>
+                <li><a href="#" class="nav-link">Serviços</a></li>
+                <li><a href="#" class="nav-link">Portfólio</a></li>
+                <li><a href="#" class="nav-link">Contato</a></li>
+            </ul>
+        </nav>
 
-        <nav>nav</nav>
+        <a href="#" class="btn-cta">Conhecer</a>
 
-        <section>section</section>
+        <button class="menu-toggle" id="mobile-menu" aria-label="Abrir menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+    </header>
 
-        <main>
+    <!-- CONTEÚDO APENAS PARA TESTAR A ROLAGEM -->
+    <main class="content-box">
         <article>article</article>
         <article>article</article>
         <article>article</article>
         <article>article</article>
         <article>article</article>
-        <article>article</article>
-        </main>
+        <article>article</article>    
+    </main>
 
-        <footer>footer</footer>
-
-    </div>
-
+    <footer class="footer">
+        <p>Rodapé © 2026</p>
+    </footer>
     <script src="script.js"></script>
 
 </body>
